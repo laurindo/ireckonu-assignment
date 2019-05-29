@@ -8,8 +8,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfilesComponent, ProfileDetailComponent, ProfileService } from './profiles';
 import { MatTableModule, MatTabsModule, MatPaginatorModule, MatSortModule, MatAutocompleteModule, MatFormFieldModule, MatInputModule} from '@angular/material';
-import { TableComponent} from './shared/database/table.component'
-import { FullLayoutComponent } from './layout/full-layout/full-layout.component'
+import { TableComponent} from './shared/table/table.component';
+import { FullLayoutComponent } from './layout/full-layout/full-layout.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,7 @@ import { FullLayoutComponent } from './layout/full-layout/full-layout.component'
     BrowserAnimationsModule,
     MatTableModule,
     MatTabsModule,
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule,
     MatPaginatorModule,
     MatFormFieldModule,
