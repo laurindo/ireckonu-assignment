@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProfileService } from '../profile.service'
-import { Profile } from '../profile.model'
+import { ProfileService } from '../profile.service';
+import { Profile } from '../profile.model';
 import { MatTableDataSource} from '@angular/material';
 import {FormControl} from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -15,7 +15,7 @@ export class ProfilesComponent implements OnInit {
   myControl = new FormControl();
   options: string[] = ['One', 'Two', 'Three'];
   data: Profile[];
-  displayedColumns: string[] = []
+  displayedColumns: string[] = [];
   dataSource = new MatTableDataSource<Profile>();
 
   constructor(private service: ProfileService, private router: Router) {}
