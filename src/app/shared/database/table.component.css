@@ -1,0 +1,13 @@
+h5 {
+    color: #676A6C;
+    font-weight: normal;
+}
+.crud-icon {
+    font-size: 16px !important;
+    margin-right: 6px !important;
+}
+
+td {
+    white-space: normal !important; 
+    word-wrap: break-word;  
+  }

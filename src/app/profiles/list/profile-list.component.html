@@ -1,0 +1,20 @@
+<div class="header-profiles">
+  <h1>Profiles</h1>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input type="text" placeholder="Search Pr" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of options" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+</div>
+
+<section>
+  <div class="container-table">
+    <app-table [data]="data" [displayedColumns]="displayedColumns"
+     (clickEvent)="click($event)"></app-table>
+  </div>
+</section>
