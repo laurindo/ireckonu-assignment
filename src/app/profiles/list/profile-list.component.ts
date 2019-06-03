@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ProfileService } from '../profile.service';
-import { Profile } from '../profile.model';
 import { MatTableDataSource} from '@angular/material';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { ProfileService } from '../profile.service';
+import { Profile } from '../profile.model';
 import ColumnTranslator from '../../shared/table/column.translator';
 
 @Component({
@@ -14,7 +15,7 @@ import ColumnTranslator from '../../shared/table/column.translator';
 export class ProfilesComponent implements OnInit {
 
   myControl = new FormControl();
-  options: string[] = ['One', 'Two', 'Three'];
+  options;
   data: Profile[];
   displayedColumns: string[] = [];
   displayedColumnsHead: Object[] = [];
@@ -27,6 +28,7 @@ export class ProfilesComponent implements OnInit {
   ngOnInit() {
     this.service.findProfiles().subscribe(result => {
       this.data = result;
+      this.options = result.map(r => r['first_name']);
       this.displayedColumnsHead = this.columnTranslator.getSchema('PROFILE').getColumnsHead();
       this.displayedColumns = this.columnTranslator.getSchema('PROFILE').getColumns();
 
@@ -38,5 +40,9 @@ export class ProfilesComponent implements OnInit {
   click(profile: Profile){
     this.router.navigate(['/profile/detail', profile.localid]);
     localStorage.setItem('current.profile.selected', JSON.stringify(profile));
+  }
+
+  doFilter(value) {
+    this.dataSource.filter = value.trim().toLocaleLowerCase();
   }
 }

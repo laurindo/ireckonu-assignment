@@ -1,12 +1,16 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import {MatPaginator, MatTableDataSource} from '@angular/material';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-table',
-  styleUrls: ['./table.component.css'],
+  styleUrls: ['./table.component.scss'],
   templateUrl: './table.component.html'
 })
 export class TableComponent implements OnInit {
+
+  myControl = new FormControl();
+  options;
 
   @Output() clickEvent: EventEmitter<Element> = new EventEmitter();
 
@@ -27,6 +31,10 @@ export class TableComponent implements OnInit {
 
   onRowClicked(row) {
     this.clickEvent.emit(row);
+  }
+
+  doFilter(value) {
+    this.dataSource.filter = value.trim().toLocaleLowerCase();
   }
 
 }

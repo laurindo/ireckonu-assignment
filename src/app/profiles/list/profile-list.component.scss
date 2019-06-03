@@ -1,12 +1,13 @@
+@import '../../../colors.scss';
+
 .header-profiles {
   padding: 25px;
-  background-color: #03a9f4;
+  background-color: $blue;
   h1 {
-    color: #fff;
+    color: $white;
   }
 }
 
 .container-table {
-  background-color: #f5faff;
-  padding: 25px;
+  background-color: $cream;
 }

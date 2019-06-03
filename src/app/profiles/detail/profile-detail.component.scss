@@ -1,5 +1,21 @@
 @import '../../../colors.scss';
 
+.golden-color {
+  color: $gold;
+}
+
+.blue-color {
+  color: $blue;
+}
+
+.grey-color {
+  color: $grey;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 .header-profiles {
   padding: 25px;
   background-color: $blue;
@@ -103,6 +119,7 @@
 
         label {
           margin: 0 0 0 20px;
+          min-width: 100px;
         }
       }
     }
