@@ -9,7 +9,7 @@
   <div class="container-table-details">
 
     <div class="container-quick-facts">
-      <div class="quick-facts">
+      <div class="quick-facts mat-elevation-z2">
 
         <h5>Quick Facts</h5>
 
@@ -54,7 +54,7 @@
           </div>
 
           <div class="graph">
-              <i class="material-icons">open_in_new</i>
+              <i class="material-icons">pie_chart</i>
               <label>R: 70%</label>
               <label>F: 50%</label>
               <label>M: 90%</label>
@@ -107,10 +107,10 @@
     </div>
 
     <div class="container-list-details">
-      <mat-tab-group [color]="primary">
-          <mat-tab label="Profile Detail"> Profile Detail </mat-tab>
-          <mat-tab label=" Profile ID's"> Profile ID's </mat-tab>
-          <mat-tab label="Activity Timeline"> Activity Timeline </mat-tab>
+      <mat-tab-group [color]="primary" (selectedTabChange)="changeTab($event)" [selectedIndex]="selectedPageIndex">
+          <mat-tab label="Profile Detail" id="1"></mat-tab>
+          <mat-tab label=" Profile ID's" id="2"></mat-tab>
+          <mat-tab label="Activity Timeline" id="3"></mat-tab>
         </mat-tab-group>
     </div>
 
@@ -119,5 +119,18 @@
 </div>
 
 <div class="content-details">
-  kjjk
+  <div *ngIf="selectedPageIndex === 0" class="content mat-elevation-z2">
+    <div class="details">
+      <h5>Profile Detail</h5>
+      <div class="grid mat-elevation-z2">
+        <div *ngFor="let item of grid">
+          <p class="key">{{ item.label }}</p>
+          <p class="value">{{ item.value }}</p>
+          <p><i class="material-icons">create</i></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="selectedPageIndex === 1" class="content mat-elevation-z2">Content Profile Ids</div>
+  <div *ngIf="selectedPageIndex === 2" class="content mat-elevation-z2">Content Activity Timeline</div>
 </div>

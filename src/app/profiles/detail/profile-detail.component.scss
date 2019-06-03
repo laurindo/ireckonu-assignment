@@ -1,6 +1,8 @@
+@import '../../../colors.scss';
+
 .header-profiles {
   padding: 25px;
-  background-color: #03a9f4;
+  background-color: $blue;
 
   .profile-header {
     display: flex;
@@ -8,7 +10,7 @@
     align-items: center;
 
     h1 {
-      color: #fff;
+      color: $white;
     }
 
     img {
@@ -30,10 +32,10 @@
   .quick-facts {
     padding: 0 20px;
     position: absolute;
-    background-color: aliceblue;
+    background-color: $white;
 
     h5 {
-      color: #3c4251;
+      color: $grey;
       font-weight: 600;
     }
 
@@ -42,17 +44,17 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      border-bottom: solid 1px #ccd2d8;
+      border-bottom: solid 1px $border-cream;
       margin-bottom: 10px;
       padding: 10px 0;
 
       label {
-        color: #3c4251;
+        color: $grey;
         font-size: 12px;
       }
 
       i {
-        color: #03a9f4;
+        color: $blue;
       }
     }
 
@@ -112,4 +114,49 @@
 .container-list-details {
   width: 75%;
   padding: 0 10px;
+}
+
+.content-details {
+  padding: 20px 0 0 400px;
+  width: 50%;
+  .content {
+    padding: 10px;
+    background-color: $white;
+    .details {
+      padding: 10px;
+      background-color: $cream;
+      border: solid 1px $border-grey;
+      .grid {
+        padding: 5px;
+        background-color: $white;
+        p {
+          margin: 0;
+          padding: 0;
+          &.key {
+            width: 25%;
+          }
+          &.value {
+            font-weight: 800;
+            width: 75%;
+          }
+          i {
+            cursor: pointer;
+            color: #ccc;
+            &:hover {
+              color: $grey;
+            }
+          }
+        }
+        div {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          border-bottom: solid 1px $border-grey;
+          padding: 5px;
+          font-size: 14px;
+          align-items: center;
+        }
+      }
+    }
+  }
 }

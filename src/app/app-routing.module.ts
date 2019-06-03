@@ -6,6 +6,11 @@ import { ProfileDetailComponent } from './profiles/detail/profile-detail.compone
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: '/profile',
+    pathMatch: 'full'
+  },
+  {
     path: 'profile', component: FullLayoutComponent,
     children: [
         { path: '', component: ProfilesComponent },
