@@ -1,12 +1,115 @@
 .header-profiles {
   padding: 25px;
   background-color: #03a9f4;
-  h1 {
-    color: #fff;
+
+  .profile-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    h1 {
+      color: #fff;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 100px;
+    }
   }
+
 }
 
-.container-table {
-  background-color: #f5faff;
-  padding: 25px;
+.container-table-details {
+  display: flex;
+}
+
+.container-quick-facts {
+  width: 20%;
+
+  .quick-facts {
+    padding: 0 20px;
+    position: absolute;
+    background-color: aliceblue;
+
+    h5 {
+      color: #3c4251;
+      font-weight: 600;
+    }
+
+    .external-link {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: solid 1px #ccd2d8;
+      margin-bottom: 10px;
+      padding: 10px 0;
+
+      label {
+        color: #3c4251;
+        font-size: 12px;
+      }
+
+      i {
+        color: #03a9f4;
+      }
+    }
+
+    .information {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+      ul {
+        margin: 0 20px;
+        padding: 0;
+        list-style: none;
+        font-size: 12px;
+      }
+    }
+
+    .graph {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      label {
+        font-size: 12px;
+        margin: 0 10px;
+      }
+    }
+
+    .other-facts {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 0 20px 0;
+        font-size: 12px;
+        i {
+          font-size: 2em;
+          color: #737373;
+          margin: 0 20px 0 0;
+        }
+
+        label {
+          margin: 0 0 0 20px;
+        }
+      }
+    }
+  }
+
+
+}
+
+.container-list-details {
+  width: 75%;
+  padding: 0 10px;
 }

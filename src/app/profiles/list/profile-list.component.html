@@ -14,7 +14,12 @@
 
 <section>
   <div class="container-table">
-    <app-table [data]="data" [displayedColumns]="displayedColumns"
-     (clickEvent)="click($event)"></app-table>
+    <app-table
+      [data]="data"
+      [pageSize]="pageSize"
+      [displayedColumnsHead]="displayedColumnsHead"
+      [displayedColumns]="displayedColumns"
+      (clickEvent)="click($event)">
+    </app-table>
   </div>
 </section>

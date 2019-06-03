@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -32,7 +34,9 @@ import { FullLayoutComponent } from './layout/full-layout/full-layout.component'
     MatInputModule,
     MatAutocompleteModule,
     MatSortModule,
-     HttpClientModule
+    HttpClientModule,
+    MatIconModule,
+    MatGridListModule
   ],
   providers: [ProfileService],
   bootstrap: [AppComponent]

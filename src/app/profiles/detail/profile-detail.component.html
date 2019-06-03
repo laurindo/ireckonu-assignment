@@ -1,9 +1,123 @@
 <div class="header-profiles">
-  <h1>Profiles: </h1>
- 
- <mat-tab-group [color]="primary">
-  <mat-tab label="Profile Detail"> Profile Detail </mat-tab>
-  <mat-tab label=" Profile ID's"> Profile ID's </mat-tab>
-  <mat-tab label="Activity Timeline"> Activity Timeline </mat-tab>
-</mat-tab-group>
+
+  <div class="profile-header">
+      <h1>Profiles:</h1>
+      <img src={{profileDetails.photo}} />
+      <h1>{{ profileDetails.first_name }} {{ profileDetails.last_name }}</h1>
+  </div>
+
+  <div class="container-table-details">
+
+    <div class="container-quick-facts">
+      <div class="quick-facts">
+
+        <h5>Quick Facts</h5>
+
+        <div>
+          <div class="external-link">
+            <label>Status</label>
+            <i class="material-icons">open_in_new</i>
+          </div>
+
+          <div class="information">
+              <i class="material-icons">assignment_ind</i>
+              <ul>
+                <li>ID: </li>
+                <li>Tier: Gold</li>
+                <li>Pts: 125,024</li>
+              </ul>
+          </div>
+        </div>
+
+        <!-- TOP 3 FACTS -->
+        <div>
+          <div class="external-link">
+              <label>Top 3 Facts</label>
+              <i class="material-icons">open_in_new</i>
+            </div>
+
+            <div class="information">
+                <i class="material-icons">report_problem</i>
+                <ul>
+                  <li>Suite Room</li>
+                  <li>King Bed</li>
+                  <li>Highest Floor</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- RFM SCORE -->
+        <div>
+          <div class="external-link">
+            <label>RFM Score</label>
+            <i class="material-icons">open_in_new</i>
+          </div>
+
+          <div class="graph">
+              <i class="material-icons">open_in_new</i>
+              <label>R: 70%</label>
+              <label>F: 50%</label>
+              <label>M: 90%</label>
+          </div>
+        </div>
+
+        <!-- OTHER FACTS -->
+        <div>
+          <div class="external-link">
+            <label>Other Facts</label>
+            <i class="material-icons">open_in_new</i>
+          </div>
+
+          <div>
+            <div class="other-facts">
+              <div>
+                <i class="material-icons">today</i>
+                <label>Total Stays</label>
+                <label>24</label>
+              </div>
+
+              <div>
+                <i class="material-icons">brightness_2</i>
+                <label>Nights</label>
+                <label>32</label>
+              </div>
+
+              <div>
+                <i class="material-icons">hotel</i>
+                <label>Avg Stay</label>
+                <label>1.33 nights</label>
+              </div>
+
+              <div>
+                <i class="material-icons">event_note</i>
+                <label>Last Visit</label>
+                <label>2018-08-15</label>
+              </div>
+
+              <div>
+                <i class="material-icons">money</i>
+                <label>Lifetime Value</label>
+                <label>$3084.29</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container-list-details">
+      <mat-tab-group [color]="primary">
+          <mat-tab label="Profile Detail"> Profile Detail </mat-tab>
+          <mat-tab label=" Profile ID's"> Profile ID's </mat-tab>
+          <mat-tab label="Activity Timeline"> Activity Timeline </mat-tab>
+        </mat-tab-group>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="content-details">
+  kjjk
 </div>

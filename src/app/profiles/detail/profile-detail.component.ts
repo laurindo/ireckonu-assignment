@@ -8,9 +8,11 @@ import { Profile } from '../profile.model'
 })
 export class ProfileDetailComponent implements OnInit {
 
+  profileDetails: Object = {};
 
   ngOnInit() {
-
+    this.profileDetails = JSON.parse(localStorage.getItem('current.profile.selected'));
+    console.log(localStorage.getItem('current.profile.selected'));
   }
 
 }
